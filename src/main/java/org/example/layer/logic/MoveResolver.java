@@ -3,6 +3,8 @@ package org.example.layer.logic;
 import org.example.layer.data.Board;
 import org.example.layer.presentation.Coordinates;
 
+import java.util.List;
+
 public class MoveResolver {
     public void resolveMove(Board board, Coordinates coordinates, char playerChar) throws CoordinateNotEmptyException {
 
@@ -43,6 +45,39 @@ public class MoveResolver {
             return false;
         }
 
+    }
+
+    public boolean determineIfPlayerWon(Board board, char playerChar) {
+        var columns = board.toListOfColumns();
+        var rows = board.toListOfRows();
+        var diagonals = board.getDiagonals();
+
+        int maxCountColumns = characterMaxCount(columns, playerChar);
+        int maxCountRows = characterMaxCount(rows, playerChar);
+        int maxCountDiagonals = characterMaxCount(diagonals, playerChar);
+
+        if (maxCountRows == 3 || maxCountColumns == 3 || maxCountDiagonals == 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    int characterMaxCount(List<List<Character>> bigList, char playerChar) {
+        int count = 0;
+        for (List<Character> list: bigList) {
+            int currentCount = 0;
+            for (Character character :
+                    list) {
+                if (character == playerChar) {
+                    currentCount++;
+                }
+            }
+            if (currentCount > count) {
+                count = currentCount;
+            }
+        }
+        return count;
     }
 
     public boolean allCoordinatesTaken(Board board) {

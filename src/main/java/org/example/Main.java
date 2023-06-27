@@ -31,16 +31,22 @@ public class Main {
                 playerChar = switchPlayerChar(playerChar);
             }
             commandLineInterfaceHandler.showBoard(board);
-            if (moveResolver.gameWon(board, coordinates)) {
-                System.out.println("current player won");
+            if (moveResolver.determineIfPlayerWon(board, 'o')) {
+                System.out.println("player with \'o\' won");
                 break;
-            }else if (moveResolver.allCoordinatesTaken(board)) {
-                System.out.println("board is full - you cannot make more moves");
-                System.out.println("its draw");
+            } else if (moveResolver.determineIfPlayerWon(board, 'x')) {
+                System.out.println("player with \'x\' won");
                 break;
             }
-//            System.out.println("board full: " + moveResolver.allCoordinatesTaken(board));
 
+            /*if (moveResolver.gameWon(board, coordinates)) {
+                System.out.println("current player won");
+                break;
+            }*/ else if (moveResolver.allCoordinatesTaken(board)) {
+                System.out.println("board is full - you cannot make more moves");
+                System.out.println("its a draw");
+                break;
+            }
         }
 
     }
