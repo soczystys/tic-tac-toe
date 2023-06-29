@@ -22,8 +22,10 @@ public class MoveResolverTestSuite {
             board.setCurrentState(new Coordinates(1, 2), 'o');
             board.setCurrentState(new Coordinates(1, 3), 'o');
 
-            assertTrue(moveResolver.determineIfPlayerWon(board, 'o'));
-            assertFalse(moveResolver.determineIfPlayerWon(board, 'x'));
+            assertTrue(moveResolver.determineIfPlayerWon(board, 'o', 3));
+            assertFalse(moveResolver.determineIfPlayerWon(board, 'x', 3));
+
+            assertTrue(moveResolver.hasStreak(board, 'o', 3));
         }
 
         @Test
@@ -34,8 +36,10 @@ public class MoveResolverTestSuite {
             board.setCurrentState(new Coordinates(1, 2), 'x');
             board.setCurrentState(new Coordinates(1, 3), 'x');
 
-            assertTrue(moveResolver.determineIfPlayerWon(board, 'x'));
-            assertFalse(moveResolver.determineIfPlayerWon(board, 'o'));
+            assertTrue(moveResolver.determineIfPlayerWon(board, 'x', 3));
+            assertFalse(moveResolver.determineIfPlayerWon(board, 'o', 3));
+
+            assertTrue(moveResolver.hasStreak(board, 'x', 3));
         }
 
         @Test
@@ -46,8 +50,10 @@ public class MoveResolverTestSuite {
             board.setCurrentState(new Coordinates(2, 1), 'o');
             board.setCurrentState(new Coordinates(3, 1), 'o');
 
-            assertTrue(moveResolver.determineIfPlayerWon(board, 'o'));
-            assertFalse(moveResolver.determineIfPlayerWon(board, 'x'));
+            assertTrue(moveResolver.determineIfPlayerWon(board, 'o', 3));
+            assertFalse(moveResolver.determineIfPlayerWon(board, 'x', 3));
+
+            assertTrue(moveResolver.hasStreak(board, 'o', 3));
         }
 
         @Test
@@ -58,8 +64,10 @@ public class MoveResolverTestSuite {
             board.setCurrentState(new Coordinates(2, 1), 'x');
             board.setCurrentState(new Coordinates(3, 1), 'x');
 
-            assertTrue(moveResolver.determineIfPlayerWon(board, 'x'));
-            assertFalse(moveResolver.determineIfPlayerWon(board, 'o'));
+            assertTrue(moveResolver.determineIfPlayerWon(board, 'x', 3));
+            assertFalse(moveResolver.determineIfPlayerWon(board, 'o', 3));
+
+            assertTrue(moveResolver.hasStreak(board, 'x', 3));
         }
 
         @Test
@@ -70,8 +78,10 @@ public class MoveResolverTestSuite {
             board.setCurrentState(new Coordinates(2, 2), 'o');
             board.setCurrentState(new Coordinates(3, 1), 'o');
 
-            assertTrue(moveResolver.determineIfPlayerWon(board, 'o'));
-            assertFalse(moveResolver.determineIfPlayerWon(board, 'x'));
+            assertTrue(moveResolver.determineIfPlayerWon(board, 'o', 3));
+            assertFalse(moveResolver.determineIfPlayerWon(board, 'x', 3));
+
+            assertTrue(moveResolver.hasStreak(board, 'o', 3));
         }
 
         @Test
@@ -82,8 +92,10 @@ public class MoveResolverTestSuite {
             board.setCurrentState(new Coordinates(2, 2), 'x');
             board.setCurrentState(new Coordinates(3, 3), 'x');
 
-            assertTrue(moveResolver.determineIfPlayerWon(board, 'x'));
-            assertFalse(moveResolver.determineIfPlayerWon(board, 'o'));
+            assertTrue(moveResolver.determineIfPlayerWon(board, 'x', 3));
+            assertFalse(moveResolver.determineIfPlayerWon(board, 'o', 3));
+
+            assertTrue(moveResolver.hasStreak(board, 'x', 3));
         }
 
     }

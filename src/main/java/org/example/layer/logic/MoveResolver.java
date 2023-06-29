@@ -47,7 +47,7 @@ public class MoveResolver {
 
     }
 
-    public boolean determineIfPlayerWon(Board board, char playerChar) {
+    public boolean determineIfPlayerWon(Board board, char playerChar, int numberRequiredForWin) {
         var columns = board.toListOfColumns();
         var rows = board.toListOfRows();
         var diagonals = board.getDiagonals();
@@ -56,11 +56,87 @@ public class MoveResolver {
         int maxCountRows = characterMaxCount(rows, playerChar);
         int maxCountDiagonals = characterMaxCount(diagonals, playerChar);
 
-        if (maxCountRows == 3 || maxCountColumns == 3 || maxCountDiagonals == 3) {
+        if (maxCountRows == numberRequiredForWin || maxCountColumns == numberRequiredForWin || maxCountDiagonals == numberRequiredForWin) {
             return true;
         } else {
             return false;
         }
+    }
+
+    public boolean hasStreak(Board board, char playerChar, int numberRequiredForWin) {
+        int toTheRight;
+        int toTheLeft;
+        int higher;
+        int lower;
+        int upperLeft;
+        int upperRight;
+        int bottomLeft;
+        int bottomRight;
+
+
+        List<Coordinates> coordinatesList = board.getAllCoordinatesWithCharacter(playerChar);
+
+        for (Coordinates coordinates: coordinatesList) {
+            toTheLeft = 0;
+            toTheRight = 0;
+            higher = 0;
+            lower = 0;
+            upperLeft = 0;
+            upperRight = 0;
+            bottomLeft = 0;
+            bottomRight = 0;
+
+            for (int i = 0; i < numberRequiredForWin; i++) {
+                int x = coordinates.getX();
+                int y = coordinates.getY();
+
+                if (board.getCurrentState(new Coordinates(x + i, y)) == playerChar) {
+                    toTheRight++;
+                }
+
+                if (board.getCurrentState(new Coordinates(x - i, y)) == playerChar) {
+                    toTheLeft++;
+                }
+
+                if (board.getCurrentState(new Coordinates(x, y + i)) == playerChar) {
+                    higher++;
+                }
+
+                if (board.getCurrentState(new Coordinates(x, y - i)) == playerChar) {
+                    lower++;
+                }
+
+                if (board.getCurrentState(new Coordinates(x + i, y + i)) == playerChar) {
+                    bottomRight++;
+                }
+
+                if (board.getCurrentState(new Coordinates(x + i, y - i)) == playerChar) {
+                    upperRight++;
+                }
+
+                if (board.getCurrentState(new Coordinates(x - i, y + i)) == playerChar) {
+                    bottomLeft++;
+                }
+
+                if (board.getCurrentState(new Coordinates(x - i, y - i)) == playerChar) {
+                    upperLeft++;
+                }
+
+            }
+
+            if(toTheRight >= numberRequiredForWin
+                    || toTheLeft >= numberRequiredForWin
+                    || higher >= numberRequiredForWin
+                    || lower >= numberRequiredForWin
+                    || bottomRight >= numberRequiredForWin
+                    || upperRight >= numberRequiredForWin
+                    || bottomLeft >= numberRequiredForWin
+                    || upperLeft >= numberRequiredForWin) {
+                return true;
+            }
+
+        }
+        return false;
     }
 
     int characterMaxCount(List<List<Character>> bigList, char playerChar) {
@@ -89,5 +165,9 @@ public class MoveResolver {
             }
         }
         return true;
+    }
+
+    public void resolveAutoMove(Board board, Coordinates coordinates, char playerChar) {
+        board.setCurrentState(coordinates, playerChar);
     }
 }

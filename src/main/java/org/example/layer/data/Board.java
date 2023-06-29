@@ -6,17 +6,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
-    char[][] board = new char[3][3];
+    char[][] board;
+    int size;
 
-    public char getCurrentState(Coordinates coordinates) {
-        return board[coordinates.getX() - 1][coordinates.getY() - 1];
+    public Board(int size) {
+        this.size = size;
+        board = new char[size][size];
+        for(int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                board[i][j] = ' ';
+            }
+        }
     }
 
     public Board() {
-        for(int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                board[i][j] = ' ';
-            }
+        this(3);
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public char getCurrentState(Coordinates coordinates) {
+        if (coordinates.getX() < 1 || coordinates.getX() > size || coordinates.getY() < 1 || coordinates.getY() > size) {
+            return ' ';
+        } else {
+            return board[coordinates.getX() - 1][coordinates.getY() - 1];
         }
     }
 
@@ -32,9 +47,9 @@ public class Board {
 
         List<List<Character>> columns = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < size; i++) {
             List<Character> column = new ArrayList<>();
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < size; j++) {
                 column.add(board[i][j]);
             }
             columns.add(column);
@@ -45,9 +60,9 @@ public class Board {
     public List<List<Character>> toListOfRows() {
         List<List<Character>> columns = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < size; i++) {
             List<Character> column = new ArrayList<>();
-            for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < size; j++) {
                 column.add(board[j][i]);
             }
             columns.add(column);
@@ -61,14 +76,29 @@ public class Board {
         List<Character> diagonal1 = new ArrayList<>();
         List<Character> diagonal2 = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < size; i++) {
             diagonal1.add(board[i][i]);
-            diagonal2.add(board[i][2-i]);
+            diagonal2.add(board[i][size - i - 1]);
         }
 
         diagonals.add(diagonal1);
         diagonals.add(diagonal2);
 
         return diagonals;
+    }
+
+    public List<Coordinates> getAllCoordinatesWithCharacter(char playerChar) {
+        List<Coordinates> list = new ArrayList<>();
+
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size; j++) {
+                Coordinates coordinates = new Coordinates(i,j);
+                if (getCurrentState(coordinates) == playerChar) {
+                    list.add(coordinates);
+                }
+            }
+        }
+
+        return list;
     }
 }
