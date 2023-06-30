@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.HelloView">
+   <children>
+      <Button layoutX="274.0" layoutY="347.0" mnemonicParsing="false" text="back to first view" onAction="#switchToMenu"/>
+      <Label layoutX="286.0" layoutY="14.0" text="u are in second view" />
+   </children>
+</AnchorPane>

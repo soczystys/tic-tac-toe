@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.layer.logic.MoveResolverTestSuite$determineIfPlayerWonTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-06-29T12:51:14" hostname="K-09" time="0.051">
+  <properties/>
+  <testcase name="testColumnsNoughtsWon()" classname="org.example.layer.logic.MoveResolverTestSuite$determineIfPlayerWonTest" time="0.038"/>
+  <testcase name="testDiagonalsNoughtsWon()" classname="org.example.layer.logic.MoveResolverTestSuite$determineIfPlayerWonTest" time="0.002"/>
+  <testcase name="testRowsCrossesWon()" classname="org.example.layer.logic.MoveResolverTestSuite$determineIfPlayerWonTest" time="0.002"/>
+  <testcase name="testColumnsCrossesWon()" classname="org.example.layer.logic.MoveResolverTestSuite$determineIfPlayerWonTest" time="0.001"/>
+  <testcase name="testDiagonalsCrossesWon()" classname="org.example.layer.logic.MoveResolverTestSuite$determineIfPlayerWonTest" time="0.001"/>
+  <testcase name="testRowsNoughtsWon()" classname="org.example.layer.logic.MoveResolverTestSuite$determineIfPlayerWonTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
