@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BigBoardGameController">
+    <children>
+        <Button layoutX="248.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToMenuButtonClicked" text="back to first view" />
+        <Label fx:id="myLabel" layoutX="272.0" layoutY="14.0" text="Have fun :)" />
+        <GridPane fx:id="gridPane" layoutX="150.0" layoutY="50.0" prefHeight="300.0" prefWidth="300.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+            </rowConstraints>
+            <children>
+                <Pane id="1-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Pane id="1-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Pane id="1-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Pane id="1-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Pane id="1-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Pane id="1-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Pane id="1-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <Pane id="1-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <Pane id="1-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                <Pane id="1-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+
+
+                <Pane id="2-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Pane id="2-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Pane id="2-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Pane id="2-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Pane id="2-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Pane id="2-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Pane id="2-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Pane id="2-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Pane id="2-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <Pane id="2-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+
+                <Pane id="3-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Pane id="3-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Pane id="3-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Pane id="3-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Pane id="3-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Pane id="3-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Pane id="3-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <Pane id="3-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                <Pane id="3-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                <Pane id="3-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+
+                <Pane id="4-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Pane id="4-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Pane id="4-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Pane id="4-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Pane id="4-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Pane id="4-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Pane id="4-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <Pane id="4-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                <Pane id="4-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                <Pane id="4-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+
+                <Pane id="5-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Pane id="5-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Pane id="5-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Pane id="5-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Pane id="5-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Pane id="5-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Pane id="5-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                <Pane id="5-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                <Pane id="5-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                <Pane id="5-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+
+                <Pane id="6-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <Pane id="6-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Pane id="6-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Pane id="6-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <Pane id="6-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                <Pane id="6-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                <Pane id="6-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                <Pane id="6-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                <Pane id="6-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                <Pane id="6-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+
+                <Pane id="7-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                <Pane id="7-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                <Pane id="7-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                <Pane id="7-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                <Pane id="7-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                <Pane id="7-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                <Pane id="7-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                <Pane id="7-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                <Pane id="7-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                <Pane id="7-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+
+                <Pane id="8-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+                <Pane id="8-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                <Pane id="8-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                <Pane id="8-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                <Pane id="8-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                <Pane id="8-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                <Pane id="8-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                <Pane id="8-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                <Pane id="8-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                <Pane id="8-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+
+                <Pane id="9-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+                <Pane id="9-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                <Pane id="9-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                <Pane id="9-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                <Pane id="9-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                <Pane id="9-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                <Pane id="9-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                <Pane id="9-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                <Pane id="9-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                <Pane id="9-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+
+                <Pane id="10-1" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="0" />
+                <Pane id="10-2" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                <Pane id="10-3" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                <Pane id="10-4" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                <Pane id="10-5" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                <Pane id="10-6" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                <Pane id="10-7" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                <Pane id="10-8" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+                <Pane id="10-9" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+                <Pane id="10-10" onMouseClicked="#clickedGridCell" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-border-color: #fa5252;" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
