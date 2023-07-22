@@ -19,16 +19,15 @@ import org.example.layer.logic.MoveResolver;
 import org.example.layer.presentation.Coordinates;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class ControllerCommonMethodsHandler {
 
 
-    public void switchToMenuButtonClicked(ActionEvent actionEvent, Parent root, Stage stage, Scene scene) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/hello-view.fxml")));
-        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+    public void switchToMenuButtonClicked(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/main-menu-view.fxml")));
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
     }
 

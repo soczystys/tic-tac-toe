@@ -17,14 +17,21 @@ public class HelloView {
     private Parent root;
 
     public void switchToStandardGame(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/hello2.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/standard-game-view.fxml")));
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
     }
 
     public void switchToBigBoardGame(ActionEvent actionEvent) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/hello3.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/big-board-game-view.fxml")));
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+    }
+
+    public void switchToSoloGame(ActionEvent actionEvent) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/solo-game-view.fxml")));
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

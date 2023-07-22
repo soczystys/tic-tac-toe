@@ -24,9 +24,6 @@ public class BigBoardGameController {
     MoveResolver moveResolver = new MoveResolver();
     private boolean circleBoolean = true;
     ControllerCommonMethodsHandler controllerCommonMethodsHandler = new ControllerCommonMethodsHandler();
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     public void clickedGridCell(MouseEvent mouseEvent) throws IOException {
         controllerCommonMethodsHandler.clickedGridCell(mouseEvent, circleBoolean, moveResolver, board, myLabel, gridPane, 5);
@@ -42,6 +39,6 @@ public class BigBoardGameController {
     }
 
     public void switchToMenuButtonClicked(ActionEvent actionEvent) throws IOException {
-        controllerCommonMethodsHandler.switchToMenuButtonClicked(actionEvent, root, stage, scene);
+        controllerCommonMethodsHandler.switchToMenuButtonClicked(actionEvent);
     }
 }
