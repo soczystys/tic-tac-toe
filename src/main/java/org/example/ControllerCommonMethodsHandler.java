@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
@@ -53,13 +55,8 @@ public class ControllerCommonMethodsHandler {
         Integer x = extractX(id);
         Integer y = extractY(id);
 
-//        TODO
 
-        try {
-            moveResolver.resolveMove(board, new Coordinates(x, y), playerChar);
-        } catch (CoordinateNotEmptyException e) {
-
-        }
+            moveResolver.resolveAutoMove(board, new Coordinates(x, y), playerChar);
 
         if (moveResolver.hasStreak(board, 'o', numberRequiredForWin)) {
             System.out.println("player with \'o\' won");
@@ -85,24 +82,21 @@ public class ControllerCommonMethodsHandler {
         return Integer.parseInt(id.split("-")[1]);
     }
 
-//    public static void main(String[] args) {
-////        System.out.println(Arrays.toString("9-10".split("-")));
-//        System.out.println(extractX("9-10"));
-//        System.out.println(extractY("9-10"));
-//    }
-
     public static void drawCross(Pane pane) {
         Line line1 = new Line(0,0, pane.getHeight(), pane.getHeight());
-        line1.setStrokeWidth(2.0);
+        line1.setStrokeWidth(1.0);
         Line line2 = new Line(pane.getHeight(),0, 0, pane.getHeight());
-        line2.setStrokeWidth(2.0);
+        line2.setStrokeWidth(1.0);
         pane.getChildren().add(line1);
         pane.getChildren().add(line2);
         pane.setDisable(true);
     }
 
     public static void drawCircle(Pane pane) {
-        Circle circle = new Circle(pane.getHeight()/2, pane.getHeight()/2, 5);
+        Circle circle = new Circle(pane.getHeight()/2, pane.getHeight()/2, 10);
+        circle.setFill(Color.TRANSPARENT);
+        circle.setStroke(Color.BLACK);
+
         pane.getChildren().add(circle);
         pane.setDisable(true);
     }

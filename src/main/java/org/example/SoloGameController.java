@@ -16,7 +16,6 @@ import org.example.layer.presentation.Coordinates;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.example.ControllerCommonMethodsHandler.*;
 
@@ -25,7 +24,7 @@ public class SoloGameController {
     @FXML
     GridPane gridPane;
     @FXML
-    Label myLabel;
+    Label mainLabel;
 
     private boolean circleBoolean = true;
 
@@ -39,37 +38,20 @@ public class SoloGameController {
     }
 
     public void clickedGridCell(MouseEvent mouseEvent) throws IOException {
-//        controllerCommonMethodsHandler.clickedGridCell(mouseEvent, circleBoolean, moveResolver, board, myLabel, gridPane, 3);
-//
+
         var pane = ((Pane) mouseEvent.getSource());
         var id = pane.getId();
         var scene = pane.getScene();
         char playerChar;
 
-//        if (circleBoolean) {
-            drawCircle(pane);
-            playerChar = 'o';
-//        } else {
-//            drawCross(pane);
-//            playerChar = 'x';
-//        }
-//        circleBoolean = !circleBoolean;
+        drawCircle(pane);
+        playerChar = 'o';
 
-//        Integer x = Integer.parseInt(String.valueOf(id.charAt(0)));
-//        Integer y = Integer.parseInt(String.valueOf(id.charAt(1)));
 
-//        Integer x = extractX(id);
         Integer x = Integer.parseInt(id.split("-")[0]);
         Integer y = Integer.parseInt(id.split("-")[1]);
-//        Integer y = extractY(id);
 
-//        TODO
-//
-        try {
-            moveResolver.resolveMove(board, new Coordinates(x, y), playerChar);
-        } catch (CoordinateNotEmptyException e) {
-
-        }
+        moveResolver.resolveAutoMove(board, new Coordinates(x, y), playerChar);
 
         determineIfWon();
 
@@ -87,24 +69,24 @@ public class SoloGameController {
 
         Pane autoPane = (Pane) paneInList.get(0);
         drawCross(autoPane);
-        determineIfWon();
 
+        determineIfWon();
 
     }
 
     private void determineIfWon() {
         if (moveResolver.hasStreak(board, 'o', 3)) {
             System.out.println("player with \'o\' won");
-            myLabel.setText("player with \'o\' won");
+            mainLabel.setText("player with \'o\' won");
 
             gridPane.setDisable(true);
 
         } else if (moveResolver.hasStreak(board, 'x', 3)) {
             System.out.println("player with \'x\' won");
-            myLabel.setText("player with \'x\' won");
+            mainLabel.setText("player with \'x\' won");
             gridPane.setDisable(true);
         } else if (moveResolver.allCoordinatesTaken(board)) {
-            myLabel.setText("its a draw");
+            mainLabel.setText("its a draw");
             gridPane.setDisable(true);
         }
     }

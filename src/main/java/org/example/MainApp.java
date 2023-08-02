@@ -11,7 +11,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/main-menu-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        primaryStage.setTitle("Hello!");
+        primaryStage.setTitle("tic tac toe");
         primaryStage.setScene(scene);
 
         Image icon = new Image("icon3.png");
